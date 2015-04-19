@@ -1,0 +1,10 @@
+<template name="layout">
+    <div class="text-lowercase">
+        {{> header}}
+        <!--{{> errors}}-->
+        <div id="all">
+            {{> yield}}
+            {{> footer}}
+        </div>
+    </div>
+</template>
