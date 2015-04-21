@@ -1811,14 +1811,14 @@ address {
   margin-bottom: 20px;
   line-height: 1.42857143;
 }
-.panel {
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 0;
-  -webkit-box-shadow: 0 0 0;
-  box-shadow: 0 0 0;
-}
+/*.panel {*/
+  /*margin-bottom: 20px;*/
+  /*background-color: #ffffff;*/
+  /*border: 1px solid transparent;*/
+  /*border-radius: 0;*/
+  /*-webkit-box-shadow: 0 0 0;*/
+  /*box-shadow: 0 0 0;*/
+/*}*/
 .panel-primary {
   border-color: #6aae7a;
 }
@@ -1926,19 +1926,38 @@ a.list-group-item.active > .badge,
   background-color: #6aae7a;
 }
 .fundraiser-amount {
-  font-weight: bold;
+  /*font-family: "Montserrat", Helvetica, Arial, sans-serif;*/
   font-size: 18px;
-  padding-top: 5px;
+  margin-bottom: -5px;
 }
-.fundraiser-info {
+.fundraiser-location {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  padding-top: 2px;
+}
+.fundraiser-days-left {
   float: right;
-  font-size: 24px;
-  color: #555555;
+  font-size: 12px;
   padding-top: 5px;
 }
-.fundraiser-info:hover {
+.fundraiser-category {
+  padding-top: 1px;
+}
+.fundraiser-link,
+.fundraiser-link:hover{
+  color: #555555;
+}
+.fundraiser-icon:hover {
   color: #999999;
 }
+/*.fundraiser-info {*/
+  /*float: right;*/
+  /*font-size: 24px;*/
+  /*color: #555555;*/
+  /*padding-top: 5px;*/
+/*}*/
+/*.fundraiser-info:hover {*/
+  /*color: #999999;*/
+/*}*/
 .form-control {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   text-transform: lowercase;
@@ -1962,4 +1981,16 @@ a.list-group-item.active > .badge,
 .modal,
 .footer-name {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+.padding10 {
+  padding: 10px;
+}
+.padding5x10 {
+  padding: 5px 10px;
+}
+.font12 {
+  font-size: 12px;
+}
+.panel-body {
+  background-color: #f5f5f5;
 }
