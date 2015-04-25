@@ -1,0 +1,124 @@
+<template name="header">
+
+    <div class="navbar navbar-default navbar-fixed-top yamm" role="navigation" id="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="{{pathFor 'home'}}">
+                    <div style="font-size: 48px; margin-top: 16px;">
+                        gi<i class="fa fa-heart logo-icon-header" style="padding:0 4px 0 3px; margin:-2px 0 0 0;"></i>e
+                    </div>
+                </a>
+
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-primary" style="padding:5px;" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            <!--/.navbar-header -->
+
+            <div class="navbar-collapse collapse" id="navigation">
+
+                <ul class="nav navbar-nav navbar-left visible-xs">
+                    <li><a href="#"><i class="fa fa-arrow-circle-up fa-lg"></i> Start A Fundraiser</a></li>
+                    <li><a href="#"><i class="fa fa-gift fa-lg"></i> Giveaway</a></li>
+                    <li><a href="#"><i class="fa fa-question-circle fa-lg"></i> Help</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#signin-modal"><i class="fa fa-user fa-lg"></i> Sign In</a></li>
+                </ul>
+
+            </div>
+            <!--/.nav-collapse -->
+
+            <div class="navbar-collapse collapse pull-right navlink">
+                <a href="#" class="btn btn-primary-inverse navbar-btn" data-toggle="modal" data-target="#signin-modal">
+                    <i class="fa fa-user fa-lg"></i>
+                    <span class="sr-only">Sign In</span>
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse pull-right navlink">
+                <a href="#" class="btn btn-primary navbar-btn">
+                    <i class="fa fa-question-circle fa-lg"></i>
+                    Help
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse pull-right navlink">
+                <a href="#" class="btn btn-primary navbar-btn">
+                    <i class="fa fa-gift fa-lg"></i>
+                    Giveaway
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse pull-right">
+                <a href="#" class="btn btn-primary navbar-btn">
+                    <i class="fa fa-arrow-circle-up fa-lg"></i>
+                    Start A Fundraiser
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /#navbar -->
+
+    <!-- modal: sign in -->
+    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="Login">Sign In</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="password">
+                    </div>
+
+                    <p class="text-center">
+                        <button class="btn btn-primary">sign in</button>
+                    </p>
+
+                    <p class="text-center text-muted"><a href="#">or sign up</a></p>
+
+                    <!--<p class="text-center text-muted"><a href="register.html"><strong>Register now</strong></a>! It is-->
+                    <!--easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal: sign in -->
+
+    <!-- modal: social -->
+    <div class="modal fade" id="social-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="Login">Give Social</h4>
+                </div>
+                <div class="modal-body">
+                    <div style="margin-bottom: 14px;">
+                        <div class="fb-like" data-href="http://give.cm" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <a href="https://twitter.com/gogivecm" class="twitter-follow-button" data-show-count="true">Follow @gogivecm</a>
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://give.cm" data-text="Raise money and win donations for your cause">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>
+                    <div class="g-plusone" data-size="medium" data-href="http://give.cm"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal: social -->
+
+</template>

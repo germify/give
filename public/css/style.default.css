@@ -1028,7 +1028,7 @@ button i.fa {
 }
 .bar {
   position: relative;
-  padding: 50px 0;
+  padding: 25px 0 50px 0;
   margin: -20px 0 20px 0;
 }
 .bar.background-gray {
@@ -1110,14 +1110,14 @@ button i.fa {
   color: #6aae7a;
   text-decoration: none;
 }
-#footer .social a {
-  color: #555555;
-  font-size: 25px;
-  margin: 0 10px 0 0;
-}
-#footer .social a:hover {
-  color: #6aae7a;
-}
+/*#footer .social a {*/
+  /*color: #555555;*/
+  /*font-size: 25px;*/
+  /*margin: 0 10px 0 0;*/
+/*}*/
+/*#footer .social a:hover {*/
+  /*color: #6aae7a;*/
+/*}*/
 #copyright {
   background: #333;
   color: #ccc;
@@ -1125,9 +1125,9 @@ button i.fa {
   font-size: 12px;
   line-height: 28px;
 }
-#copyright .social {
-  font-size: 30px;
-}
+/*#copyright .social {*/
+  /*font-size: 30px;*/
+/*}*/
 #copyright p {
   margin: 0;
 }
@@ -1258,9 +1258,6 @@ button i.fa {
   }
   .navbar-collapse.in {
     overflow-y: visible;
-  }
-  .navbar-collapse.right {
-    float: right;
   }
   .navbar-fixed-top .navbar-collapse,
   .navbar-static-top .navbar-collapse,
@@ -1529,7 +1526,7 @@ hr {
 .btn-primary-inverse {
   color: #ffffff;
   background-color: #6aae7a;
-  border-color: #ffffff;
+  /*border-color: #ffffff;*/
 }
 .btn-primary-inverse:hover {
   color: #6aae7a;
@@ -1872,7 +1869,7 @@ a.list-group-item.active > .badge,
 /*!
  * Yamm!3
  * Yet another megamenu for Bootstrap 3
- * 
+ *
  * http://geedmo.github.com/yamm3
  */
 .yamm .nav,
@@ -1948,16 +1945,9 @@ a.list-group-item.active > .badge,
 }
 .fundraiser-icon:hover {
   color: #999999;
+  font-size: 16px;
+  padding-top:2px;
 }
-/*.fundraiser-info {*/
-  /*float: right;*/
-  /*font-size: 24px;*/
-  /*color: #555555;*/
-  /*padding-top: 5px;*/
-/*}*/
-/*.fundraiser-info:hover {*/
-  /*color: #999999;*/
-/*}*/
 .form-control {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   text-transform: lowercase;
@@ -1991,6 +1981,42 @@ a.list-group-item.active > .badge,
 .font12 {
   font-size: 12px;
 }
+.font36 {
+  font-size: 32px;
+}
 .panel-body {
   background-color: #f5f5f5;
+}
+.logo-icon-header {
+  color: #6aae7a;
+  font-size:32px;
+  vertical-align: top;
+}
+.logo-icon-footer {
+  color: #6aae7a;
+  font-size:8px;
+  vertical-align: middle;
+}
+/* This gets Google to fall into place */
+.social {
+  font-size: 1px;
+  margin-right: 0;
+}
+
+/* This gets Facebook to fall into place */
+.social iframe {
+  vertical-align: middle;
+  margin-right: 0;
+  width: 40px;
+}
+
+/* Set an optional width for your button wrappers */
+.social span {
+  display: inline-block;
+  width: 60px;
+}
+
+/* Adjust the widths individually if you like */
+.social .google {
+  width: 44px;
 }
