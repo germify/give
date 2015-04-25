@@ -1110,14 +1110,13 @@ button i.fa {
   color: #6aae7a;
   text-decoration: none;
 }
-/*#footer .social a {*/
-  /*color: #555555;*/
-  /*font-size: 25px;*/
-  /*margin: 0 10px 0 0;*/
-/*}*/
-/*#footer .social a:hover {*/
-  /*color: #6aae7a;*/
-/*}*/
+#footer .social a {
+  color: #555555;
+  font-size: 30px;
+}
+#footer .social a:hover {
+  color: #6aae7a;
+}
 #copyright {
   background: #333;
   color: #ccc;
@@ -1125,9 +1124,9 @@ button i.fa {
   font-size: 12px;
   line-height: 28px;
 }
-/*#copyright .social {*/
-  /*font-size: 30px;*/
-/*}*/
+#copyright .social {
+  font-size: 34px;
+}
 #copyright p {
   margin: 0;
 }
@@ -1957,7 +1956,7 @@ a.list-group-item.active > .badge,
 .form-control::-moz-placeholder { color: #ccc; }
 .form-control:-ms-input-placeholder { color: #ccc; }
 .container-fluid {
-  max-width: 1170px;
+  max-width: 991px;
 }
 .list-group-item-header {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
@@ -1996,27 +1995,4 @@ a.list-group-item.active > .badge,
   color: #6aae7a;
   font-size:8px;
   vertical-align: middle;
-}
-/* This gets Google to fall into place */
-.social {
-  font-size: 1px;
-  margin-right: 0;
-}
-
-/* This gets Facebook to fall into place */
-.social iframe {
-  vertical-align: middle;
-  margin-right: 0;
-  width: 40px;
-}
-
-/* Set an optional width for your button wrappers */
-.social span {
-  display: inline-block;
-  width: 60px;
-}
-
-/* Adjust the widths individually if you like */
-.social .google {
-  width: 44px;
 }
