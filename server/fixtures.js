@@ -1,181 +1,201 @@
-// insert categories
-if (Categories.find().count() === 0) {
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Animals',
-        icon: 'fa fa-paw',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Community',
-        icon: 'fa fa-users',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Education',
-        icon: 'fa fa-graduation-cap',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Emergencies',
-        icon: 'fa fa-ambulance',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Events',
-        icon: 'fa fa-birthday-cake',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Faith',
-        icon: 'fa fa-book',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Family',
-        icon: 'fa fa-home',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Medical',
-        icon: 'fa fa-plus-square',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Memorials',
-        icon: 'fa fa-star',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Other',
-        icon: 'fa fa-smile-o',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Sports',
-        icon: 'fa fa-futbol-o',
-        active: true
-    });
-    Categories.insert({
-        createdAt: new Date,
-        name: 'Volunteer',
-        icon: 'fa fa-check',
-        active: true
-    });
-}
+Meteor.startup(function() {
+    // insert categories
+    if (Categories.find().count() === 0) {
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Animals',
+            icon: 'fa fa-paw',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Community',
+            icon: 'fa fa-users',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Education',
+            icon: 'fa fa-graduation-cap',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Emergencies',
+            icon: 'fa fa-ambulance',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Events',
+            icon: 'fa fa-birthday-cake',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Faith',
+            icon: 'fa fa-book',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Family',
+            icon: 'fa fa-home',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Medical',
+            icon: 'fa fa-plus-square',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Memorials',
+            icon: 'fa fa-star',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Other',
+            icon: 'fa fa-smile-o',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Sports',
+            icon: 'fa fa-futbol-o',
+            isActive: true
+        });
+        Categories.insert({
+            createdAt: new Date(),
+            name: 'Volunteer',
+            icon: 'fa fa-check',
+            isActive: true
+        });
+    }
 
-// insert test fundraisers
-if (Fundraisers.find().count() === 0) {
-    var end = new Date();
-    Fundraisers.insert({
-        customUrl: 'fund1',
-        category: 'Emergencies',
-        startDate: new Date,
-        endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
-        image: 'img/1.png',
-        videoType: 'YouTube',
-        videoLink: '',
-        title: 'Test fundraiser 1',
-        location: 'Tucson, AZ',
-        currencyCode: 'USD',
-        currencySymbol: '$',
-        goal: 50000,
-        amount: 12903,
-        active: true
-    });
-    var end = new Date();
-    Fundraisers.insert({
-        customUrl: '',
-        category: 'Medical',
-        startDate: new Date,
-        endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
-        image: 'img/2.jpg',
-        videoType: 'YouTube',
-        videoLink: '',
-        title: 'Test fundraiser 2',
-        location: 'Dallas, TX',
-        currencyCode: 'USD',
-        currencySymbol: '$',
-        goal: 25000,
-        amount: 18535,
-        active: true
-    });
-    var end = new Date();
-    Fundraisers.insert({
-        customUrl: 'fund3',
-        category: 'Family',
-        startDate: new Date,
-        endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
-        image: 'img/3.jpg',
-        videoType: 'YouTube',
-        videoLink: '',
-        title: 'Test fundraiser 3',
-        location: 'Miami, FL',
-        currencyCode: 'USD',
-        currencySymbol: '$',
-        goal: 10000,
-        amount: 8530,
-        active: true
-    });
-    var end = new Date();
-    Fundraisers.insert({
-        customUrl: 'fund4',
-        category: 'Sports',
-        startDate: new Date,
-        endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
-        image: 'img/4.jpg',
-        videoType: 'YouTube',
-        videoLink: '',
-        title: 'Test fundraiser 4',
-        location: 'New York, NY',
-        currencyCode: 'USD',
-        currencySymbol: '$',
-        goal: 100000,
-        amount: 69125,
-        active: true
-    });
-    var end = new Date();
-    Fundraisers.insert({
-        customUrl: '',
-        category: 'Memorials',
-        startDate: new Date,
-        endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
-        image: 'img/5.jpg',
-        videoType: 'YouTube',
-        videoLink: '',
-        title: 'Test fundraiser 5',
-        location: 'Las Vegas, NV',
-        currencyCode: 'USD',
-        currencySymbol: '$',
-        goal: 5000,
-        amount: 6500,
-        active: true
-    });
-    var end = new Date();
-    Fundraisers.insert({
-        customUrl: 'fund6',
-        category: 'Volunteer',
-        startDate: new Date,
-        endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
-        image: 'img/6.jpg',
-        videoType: 'YouTube',
-        videoLink: '',
-        title: 'Test fundraiser 6',
-        location: 'Portland, OR',
-        currencyCode: 'USD',
-        currencySymbol: '$',
-        goal: 75000,
-        amount: 45231,
-        active: true
-    });
-}
+    // insert test fundraisers
+    if (Fundraisers.find().count() === 0) {
+        var end = new Date();
+        Fundraisers.insert({
+            customUrl: '',
+            category: 'Emergencies',
+            organizer: 'Organizer Name',
+            beneficiary: 'Beneficiary Name',
+            startDate: new Date(),
+            endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
+            image: 'img/1.png',
+            videoType: 'YouTube',
+            videoLink: '',
+            title: 'Test fundraiser 1',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: 'Tucson, AZ, USA',
+            currencyCode: 'USD',
+            currencySymbol: '$',
+            goalAmount: 50000,
+            currentAmount: 12903,
+            isActive: true
+        });
+        var end = new Date();
+        Fundraisers.insert({
+            customUrl: 'bill',
+            category: 'Medical',
+            organizer: 'Organizer Name',
+            beneficiary: 'Beneficiary Name',
+            startDate: new Date(),
+            endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
+            image: 'img/2.jpg',
+            videoType: 'YouTube',
+            videoLink: '',
+            title: 'Test fundraiser 2',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: 'Dallas, TX, USA',
+            currencyCode: 'USD',
+            currencySymbol: '$',
+            goalAmount: 25000,
+            currentAmount: 18535,
+            isActive: true
+        });
+        var end = new Date();
+        Fundraisers.insert({
+            customUrl: '',
+            category: 'Family',
+            organizer: 'Organizer Name',
+            beneficiary: 'Beneficiary Name',
+            startDate: new Date(),
+            endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
+            image: 'img/3.jpg',
+            videoType: 'YouTube',
+            videoLink: '',
+            title: 'Test fundraiser 3',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: 'Miami, FL, USA',
+            currencyCode: 'USD',
+            currencySymbol: '$',
+            goalAmount: 10000,
+            currentAmount: 8530,
+            isActive: true
+        });
+        var end = new Date();
+        Fundraisers.insert({
+            customUrl: '',
+            category: 'Sports',
+            organizer: 'Organizer Name',
+            beneficiary: 'Beneficiary Name',
+            startDate: new Date(),
+            endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
+            image: 'img/4.jpg',
+            videoType: 'YouTube',
+            videoLink: '',
+            title: 'Test fundraiser 4',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: 'New York, NY, USA',
+            currencyCode: 'USD',
+            currencySymbol: '$',
+            goalAmount: 100000,
+            currentAmount: 69125,
+            isActive: true
+        });
+        var end = new Date();
+        Fundraisers.insert({
+            customUrl: '',
+            category: 'Memorials',
+            organizer: 'Organizer Name',
+            beneficiary: 'Beneficiary Name',
+            startDate: new Date(),
+            endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
+            image: 'img/5.jpg',
+            videoType: 'YouTube',
+            videoLink: '',
+            title: 'Test fundraiser 5',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: 'Las Vegas, NV, USA',
+            currencyCode: 'USD',
+            currencySymbol: '$',
+            goalAmount: 5000,
+            currentAmount: 6500,
+            isActive: true
+        });
+        var end = new Date();
+        Fundraisers.insert({
+            customUrl: '',
+            category: 'Volunteer',
+            organizer: 'Organizer Name',
+            beneficiary: 'Beneficiary Name',
+            startDate: new Date(),
+            endDate: new Date(end.setTime(end.getTime() + (Math.floor(Math.random() * 60) + 1) * 86400000)),
+            image: 'img/6.jpg',
+            videoType: 'YouTube',
+            videoLink: '',
+            title: 'Test fundraiser 6',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: 'Portland, OR, USA',
+            currencyCode: 'USD',
+            currencySymbol: '$',
+            goalAmount: 75000,
+            currentAmount: 45231,
+            isActive: true
+        });
+    }
+});

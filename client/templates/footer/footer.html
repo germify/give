@@ -23,7 +23,7 @@
                 <a href="#">Winners</a><br/>
                 <a href="#">Help</a><br/>
                 <a href="#">Contact</a><br/>
-                <a href="#" data-toggle="modal" data-target="#signin-modal">Sign In</a>
+                <a href="#" data-toggle="modal" data-target="#modal-signin">Sign In</a>
 
                 <hr class="hidden-md hidden-lg">
 
@@ -61,18 +61,23 @@
     <!-- copyright -->
     <div id="copyright">
         <div class="container-fluid">
-            <div class="col-md-12">
-                <p class="pull-left footer-name">&copy; {{footerYear}} Give.cm</p>
-
-                <p class="pull-right social">
-                    <a href="#" data-toggle="modal" data-target="#social-modal"><i class="fa fa-facebook-square" style="margin-right: 0;"></i></a>
-                    <a href="#" data-toggle="modal" data-target="#social-modal"><i class="fa fa-twitter-square" style="margin-right: 0;"></i></a>
-                    <a href="#" data-toggle="modal" data-target="#social-modal"><i class="fa fa-google-plus-square"></i></a>
-                </p>
-
+            <div class="col-md-12 footer-name text-center">
+                <a href="#" class="modalsocial social">
+                    <i class="fa fa-facebook-square social"></i>
+                </a>
+                <a href="#" class="modalsocial social">
+                    <i class="fa fa-twitter-square social"></i>
+                </a>
+                <a href="#" class="modalsocial social">
+                    <i class="fa fa-share-square social"></i>
+                </a>
+                <div>
+                    &copy; {{footerYear}} Gi<i class="fa fa-heart logo-icon-footer" style="padding:0 1px; margin:-1px 0 0 0;"></i>e.cm
+                </div>
             </div>
         </div>
     </div>
     <!-- /#copyright -->
+
 
 </template>

@@ -6,17 +6,14 @@
 //};
 
 Template.home.helpers({
-    categories: function() {
-        return Categories.find({active: true}, {sort: {name: 1}});
-    },
     fundraisers: function() {
-        return Fundraisers.find({active: true}, {sort: {startDate: 1}});
+        return Fundraisers.find({isActive: true}, {sort: {startDate: 1}});
     },
     amountFormat: function () {
-        return numberWithCommas(this.amount);
+        return numberWithCommas(this.currentAmount);
     },
     percentFunded: function () {
-        return (this.amount / this.goal) * 100;
+        return (this.currentAmount / this.goalAmount) * 100;
     },
     daysLeft: function () {
         var start = moment(new Date);
@@ -25,7 +22,15 @@ Template.home.helpers({
         return days;
     },
     categoryIcon: function () {
-        var icon = Categories.find({name: this.category}).fetch();
-        return icon[0].icon;
+        var category = Categories.find({name: this.category}).fetch();
+        return category[0].icon;
+    },
+    customUrl: function () {
+        var fundraiser = Fundraisers.findOne(this._id);
+        var customUrl = fundraiser.customUrl;
+        if (customUrl === '') {
+            customUrl = fundraiser._id;
+        }
+        return customUrl;
     }
 });

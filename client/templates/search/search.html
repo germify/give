@@ -1,0 +1,12 @@
+<template name="search">
+    <div class="input-group-btn">
+        <button type="button" class="btn btn-primary dropdown-toggle text-lowercase" data-toggle="dropdown" aria-expanded="false">Browse <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="/explore" style="color: #6aae7a;"><i class="fa fa-arrow-circle-up fa-lg fa-fw" style="margin-left: -8px;"></i>&nbsp; All Fundraisers</a></li>
+            {{#each categories}}
+                <li><a href="/explore/{{name}}" style="color: #6aae7a;"><i class="{{icon}} fa-lg fa-fw" style="margin-left: -8px;"></i>&nbsp; {{name}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <input type="text" name="search" id="search" class="form-control" placeholder="search fundraisers..."/>
+</template>
