@@ -1,0 +1,120 @@
+<template name="header">
+
+    <div class="navbar navbar-default navbar-fixed-top yamm" role="navigation" id="navbar">
+        <div class="container-fluid">
+
+            <div class="row" style="padding-top:7px; font-size: 12px;">
+                <div class="col-md-12">
+                    <div class="pull-right">
+                        Hello! <a href="#" data-toggle="modal" data-target="#signin-modal">sign in</a> or
+                        <a href="#" data-toggle="modal" data-target="#signin-modal">sign up</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-header" style="margin:0; padding: 0;">
+                <a class="navbar-brand" href="{{pathFor 'home'}}" style="margin:0; padding: 0;">
+                    <div style="font-size: 48px; margin: 2px 0 0 0; padding: 0;">
+                        gi<i class="fa fa-heart logo-icon-header" style="padding:0 4px 0 3px; margin:-2px 0 0 0;"></i>e
+                    </div>
+                </a>
+                <div class="pull-right visible-xs" style="margin:0; padding: 0;">
+                    <a href="{{pathFor 'fundraiserStart'}}" class="btn btn-primary-invert header-xs {{activeRouteClass 'fundraiserStart'}}" style="margin:9px -1px 0 0;">
+                        <i class="fa fa-arrow-circle-up fa-lg"></i>
+                        <span class="sr-only">Start A Fundraiser</span>
+                    </a>
+
+                    <a href="{{pathFor 'giveaway'}}" class="btn btn-primary-invert header-xs {{activeRouteClass 'giveaway'}}" style="margin:9px 0 0 0;">
+                        <i class="fa fa-gift fa-lg"></i>
+                        <span class="sr-only">Giveaway</span>
+                    </a>
+
+                    <a href="#" class="btn btn-primary-invert header-xs {{activeRouteClass 'explore' 'exploreCategory'}}" data-toggle="collapse" data-target="#explore" style="margin:9px 0 0 0;">
+                        <i class="fa fa-search" style="font-size: 16px; padding:0; margin: 0;"></i> <span class="sr-only">Explore</span> <span class="caret"></span>
+                    </a>
+
+                    <div class="btn-group pull-right" style="margin: 9px 0 0 3px;">
+                        <button type="button" class="btn btn-primary-invert dropdown-toggle header-xs" data-toggle="dropdown" aria-expanded="false" style="margin-bottom: 11px;">
+                            <i class="fa fa-info-circle fa-lg" style="padding:0; margin: 0;"></i> <span class="sr-only">More Info</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            {{> infoList}}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--/.navbar-header -->
+            <div class="pull-right hidden-xs">
+                <a href="{{pathFor 'fundraiserStart'}}" class="btn btn-primary-invert {{activeRouteClass 'fundraiserStart'}}" style="margin-top:9px;">
+                    <i class="fa fa-arrow-circle-up fa-lg"></i>
+                    Start A Fundraiser
+                </a>
+
+                <a href="{{pathFor 'giveaway'}}" class="btn btn-primary-invert {{activeRouteClass 'giveaway'}}" style="margin-top:9px;">
+                    <i class="fa fa-gift fa-lg"></i>
+                    Giveaway
+                </a>
+
+                <a href="#" class="btn btn-primary-invert {{activeRouteClass 'explore' 'exploreCategory'}}" data-toggle="collapse" data-target="#explore" style="margin-top:9px;">
+                    <i class="fa fa-search" style="font-size: 16px;"></i>
+                    Explore <span class="caret"></span>
+                </a>
+
+                <div class="btn-group pull-right" style="margin-left: 4px;">
+                    <button type="button" class="btn btn-primary-invert dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-bottom: 11px; margin-top:9px;">
+                        <i class="fa fa-info-circle fa-lg"></i> More <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                        {{> infoList}}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- explore -->
+            <div class="collapse clearfix" id="explore">
+                <div style="margin: 20px 0;">
+                    <div class="input-group">
+                        {{> search}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /#navbar -->
+
+    <!-- modal: sign in -->
+    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="Login">Sign In</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="password">
+                    </div>
+
+                    <p class="text-center">
+                        <button class="btn btn-primary-invert">sign in</button>
+                    </p>
+
+                    <p class="text-center text-muted"><a href="#">or sign up</a></p>
+
+                    <!--<p class="text-center text-muted"><a href="register.html"><strong>Register now</strong></a>! It is-->
+                    <!--easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal: sign in -->
+
+</template>

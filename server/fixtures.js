@@ -79,7 +79,7 @@ Meteor.startup(function() {
     if (Fundraisers.find().count() === 0) {
         var end = new Date();
         Fundraisers.insert({
-            customUrl: '',
+            shortId: ShortId.generate(),
             category: 'Emergencies',
             organizer: 'Organizer Name',
             beneficiary: 'Beneficiary Name',
@@ -90,7 +90,7 @@ Meteor.startup(function() {
             videoLink: '',
             title: 'Test fundraiser 1',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            location: 'Tucson, AZ, USA',
+            location: 'Tucson, AZ, United States',
             currencyCode: 'USD',
             currencySymbol: '$',
             goalAmount: 50000,
@@ -99,7 +99,7 @@ Meteor.startup(function() {
         });
         var end = new Date();
         Fundraisers.insert({
-            customUrl: 'bill',
+            shortId: 'helpbill',
             category: 'Medical',
             organizer: 'Organizer Name',
             beneficiary: 'Beneficiary Name',
@@ -110,7 +110,7 @@ Meteor.startup(function() {
             videoLink: '',
             title: 'Test fundraiser 2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            location: 'Dallas, TX, USA',
+            location: 'Dallas, TX, United States',
             currencyCode: 'USD',
             currencySymbol: '$',
             goalAmount: 25000,
@@ -119,7 +119,7 @@ Meteor.startup(function() {
         });
         var end = new Date();
         Fundraisers.insert({
-            customUrl: '',
+            shortId: ShortId.generate(),
             category: 'Family',
             organizer: 'Organizer Name',
             beneficiary: 'Beneficiary Name',
@@ -130,7 +130,7 @@ Meteor.startup(function() {
             videoLink: '',
             title: 'Test fundraiser 3',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            location: 'Miami, FL, USA',
+            location: 'Miami, FL, United States',
             currencyCode: 'USD',
             currencySymbol: '$',
             goalAmount: 10000,
@@ -139,7 +139,7 @@ Meteor.startup(function() {
         });
         var end = new Date();
         Fundraisers.insert({
-            customUrl: '',
+            shortId: ShortId.generate(),
             category: 'Sports',
             organizer: 'Organizer Name',
             beneficiary: 'Beneficiary Name',
@@ -150,7 +150,7 @@ Meteor.startup(function() {
             videoLink: '',
             title: 'Test fundraiser 4',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            location: 'New York, NY, USA',
+            location: 'New York, NY, United States',
             currencyCode: 'USD',
             currencySymbol: '$',
             goalAmount: 100000,
@@ -159,7 +159,7 @@ Meteor.startup(function() {
         });
         var end = new Date();
         Fundraisers.insert({
-            customUrl: '',
+            shortId: 'myfundraiser',
             category: 'Memorials',
             organizer: 'Organizer Name',
             beneficiary: 'Beneficiary Name',
@@ -170,7 +170,7 @@ Meteor.startup(function() {
             videoLink: '',
             title: 'Test fundraiser 5',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            location: 'Las Vegas, NV, USA',
+            location: 'Las Vegas, NV, United States',
             currencyCode: 'USD',
             currencySymbol: '$',
             goalAmount: 5000,
@@ -179,7 +179,7 @@ Meteor.startup(function() {
         });
         var end = new Date();
         Fundraisers.insert({
-            customUrl: '',
+            shortId: ShortId.generate(),
             category: 'Volunteer',
             organizer: 'Organizer Name',
             beneficiary: 'Beneficiary Name',
@@ -190,7 +190,7 @@ Meteor.startup(function() {
             videoLink: '',
             title: 'Test fundraiser 6',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            location: 'Portland, OR, USA',
+            location: 'Portland, OR, United States',
             currencyCode: 'USD',
             currencySymbol: '$',
             goalAmount: 75000,

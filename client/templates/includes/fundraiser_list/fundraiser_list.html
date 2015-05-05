@@ -1,0 +1,63 @@
+<template name="fundraiserList">
+    {{#each fundraisers}}
+        <!-- column -->
+        <div class="col-md-4 col-sm-6">
+
+            <div class="panel panel-default">
+                <div class="panel-heading padding10 clickable">
+                    <!-- image -->
+                    <div class="fundraiser-image">
+                        <a href="/{{shortId}}" class="fundraiser-link">
+                            <img src="{{image}}" alt="{{title}}" class="img-responsive"/>
+                        </a>
+                    </div>
+
+                    <!-- title -->
+                    <h5>
+                        <a href="/{{shortId}}" class="fundraiser-link">
+                            {{title}}
+                        </a>
+                    </h5>
+
+                    <!-- funding bar -->
+                    <div class="progress">
+                        <a href="/{{shortId}}" class="fundraiser-link">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{percentFunded}}"
+                                 aria-valuemin="0" aria-valuemax="{{percentFunded}}" style="width: {{percentFunded}}%;">
+                                <span class="sr-only">{{percentFunded}}% Funded</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- days left -->
+                    <div class="fundraiser-days-left">
+                        <a href="/{{shortId}}" class="fundraiser-link">
+                            {{pluralize daysLeft "Day"}} left
+                        </a>
+                    </div>
+
+                    <!-- amount raised -->
+                    <div class="fundraiser-amount">
+                        <a href="/{{shortId}}" class="fundraiser-link">
+                            {{currencySymbol}}{{amountFormat}}
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body padding5x10">
+                    <div class="fundraiser-category pull-right">
+                        <a href="#" class="fundraiser-link" title="{{category}}">
+                            <i class="{{categoryIcon}} fundraiser-icon" style="font-size: 16px; padding-top:2px;"></i>
+                        </a>
+                    </div>
+                    <div class="fundraiser-location font12">
+                        <a href="#" class="fundraiser-link">
+                            {{location}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /column -->
+    {{/each}}
+</template>
