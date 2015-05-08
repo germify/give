@@ -118,4 +118,15 @@
     </div>
     <!-- modal: sign in -->
 
+    <!-- alert -->
+    {{# if headerAlertIsDisplayed}}
+        <div id="header-alert" class="alert alert-warning">
+            <div class="container-fluid">
+                <button id="header-alert-close" type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&nbsp;×</span></button>
+                {{{headerAlert}}}
+            </div>
+        </div>
+    {{/if}}
+    <!-- /alert -->
+
 </template>

@@ -3,140 +3,34 @@
     <!-- bar -->
     <div class="bar background-image-fixed-home color-white text-center">
         <div class="dark-mask"></div>
-        <div id="barCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators
-            <div class="hidden-xs">
-                <ol class="carousel-indicators" style="margin-bottom:-55px;">
-                    <li data-target="#barCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#barCarousel" data-slide-to="1"></li>
-                </ol>
-            </div>
-            <div class="visible-xs">
-                <ol class="carousel-indicators" style="margin-bottom:-45px;">
-                    <li data-target="#barCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#barCarousel" data-slide-to="1"></li>
-                </ol>
-            </div> -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <div class="text-center hidden-xs">
-                        <h1 style="font-size: 38px; line-height: 50px;">
-                            Raise money &<br/>
-                            win donations<br/>
-                            for your cause
-                        </h1>
-                        <a href="#" class="btn btn-warning btn-lg">Create A Fundraiser For Free</a>
-                    </div>
-                    <div class="text-center visible-xs">
-                        <h2 style="font-size: 30px; line-height: 40px;">
-                            Raise money &<br/>
-                            win donations<br/>
-                            for your cause
-                        </h2>
-                        <a href="#" class="btn btn-warning">Create A Fundraiser For Free</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="text-center hidden-xs">
-                        <h1 style="font-size: 38px; line-height: 50px;">
-                            Donate to your<br/>
-                            favorite cause<br/>
-                            & enter to win
-                        </h1>
-                        <a href="#" class="btn btn-warning btn-lg">Support Fundraisers To Win</a>
-                    </div>
-                    <div class="text-center visible-xs">
-                        <h2 style="font-size: 30px; line-height: 40px;">
-                            Donate to your<br/>
-                            favorite cause<br/>
-                            & enter to win
-                        </h2>
-                        <a href="#" class="btn btn-warning">Support Fundraisers To Win</a>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.carousel -->
-        <a class="left carousel-control hidden-xs" href="#barCarousel" role="button" data-slide="prev" style="padding-top: 145px;">
-            <span class="fa fa-chevron-left fa-lg" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="left carousel-control visible-xs" href="#barCarousel" role="button" data-slide="prev" style="padding-top: 125px;">
-            <span class="fa fa-chevron-left fa-lg" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control hidden-xs" href="#barCarousel" role="button" data-slide="next" style="padding-top: 145px;">
-            <span class="fa fa-chevron-right fa-lg" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        <a class="right carousel-control visible-xs" href="#barCarousel" role="button" data-slide="next" style="padding-top: 125px;">
-            <span class="fa fa-chevron-right fa-lg" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <!-- /bar -->
-
-    <!--how it works-->
-    <div class="container-fluid">
-        <div class="how-it-works bottom-spacing-10">
-            <h2 class="text-center">How It Works</h2>
-            <!--<p>Fundraising with a free crowdfunding giveaway</p>-->
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="hiw-home">
-                                <span class="hiw-number">1</span>
-                                <span class="hiw-text">Create</span>
-                            </div>
-                        </div>
-                        <div class="padding15">
-                            <a href="{{pathFor 'fundraiserStart'}}">create a fundraiser</a> in minutes to raise money for yourself, a loved one or a favorite cause.
-                        </div>
+                <div class="col-md-12 text-center">
+                    <div class="text-center hidden-xs">
+                        <h1 style="font-size: 40px; line-height: 50px;">
+                            Raise money &<br/>
+                            win donations<br/>
+                            for your cause
+                        </h1>
+                        <a href="#" class="btn btn-warning btn-lg">Sign Up Free</a>
+                        <span style="margin-right: 10px;"></span>
+                        <a href="#" class="btn btn-warning btn-lg">Learn More</a>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="hiw-home">
-                                <span class="hiw-number">2</span>
-                                <span class="hiw-text">Share</span>
-                            </div>
-                        </div>
-                        <div class="padding15">
-                            Share your fundraiser with friends, family and the world with our easy to use sharing tools.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="hiw-home">
-                                <span class="hiw-number">3</span>
-                                <span class="hiw-text">Collect</span>
-                            </div>
-                        </div>
-                        <div class="padding15">
-                            Donations to your fundraiser are deposited into your account as soon as they’re received.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="hiw-home">
-                                <span class="hiw-number">4</span>
-                                <span class="hiw-text">Win</span>
-                            </div>
-                        </div>
-                        <div class="padding15">
-                            Fundraisers and donors can <a href="{{pathFor 'giveaway'}}">win crowdfunded money</a>. Get 1 entry for every $1 donated.
-                            <!--<a href="{{pathFor 'giveaway'}}">Win extra donations</a> when people donate to your fundraiser. Get 1 entry for every $1 donated.-->
-                        </div>
+                    <div class="text-center visible-xs">
+                        <h2 style="font-size: 30px; line-height: 40px;">
+                            Raise money &<br/>
+                            win donations<br/>
+                            for your cause
+                        </h2>
+                        <a href="#" class="btn btn-warning">Sign Up Free</a>
+                        <span style="margin-right: 10px;"></span>
+                        <a href="#" class="btn btn-warning">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- /bar -->
 
     <!-- content -->
     <div id="content">
@@ -144,60 +38,75 @@
         <!-- container -->
         <div class="container-fluid">
 
-            <!-- search -->
+            <!-- how it works -->
+            <div class="how-it-works">
+                <!--<h2 class="text-center">How It Works</h2>-->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="hiw-home">
+                                    <span class="hiw-number">1</span>
+                                    <span class="hiw-text">Create</span>
+                                </div>
+                            </div>
+                            <div class="padding15">
+                                <a href="{{pathFor 'fundraiserStart'}}">create a fundraiser</a> in minutes to raise money for yourself, a loved one or a favorite cause.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="hiw-home">
+                                    <span class="hiw-number">2</span>
+                                    <span class="hiw-text">Share</span>
+                                </div>
+                            </div>
+                            <div class="padding15">
+                                Share your fundraiser with friends, family and the world with our easy to use sharing tools.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="hiw-home">
+                                    <span class="hiw-number">3</span>
+                                    <span class="hiw-text">Collect</span>
+                                </div>
+                            </div>
+                            <div class="padding15">
+                                All donations to your fundraiser are deposited into your account as soon as they’re received.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="hiw-home">
+                                    <span class="hiw-number">4</span>
+                                    <span class="hiw-text">Win</span>
+                                </div>
+                            </div>
+                            <div class="padding15">
+                                <!--Fundraisers and donors can <a href="{{pathFor 'giveaway'}}">win crowdfunded money</a>. Get 1 entry for every $1 donated.-->
+                                <a href="{{pathFor 'giveaway'}}">Win extra donations</a> in addition to the money you raise. Get 1 entry for every $1 donated.
+                                <!--<a href="{{pathFor 'giveaway'}}">Win extra donations</a> for your fundraiser when people donate. Get 1 entry for every $1 donated.-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /how it works -->
+
+            <!-- recent activity -->
             <div class="row bottom-spacing-20">
                 <div class="col-md-12">
-                    <div class="hidden-xs">
-                        <div class="input-group input-group-lg">
-                            {{> search}}
-                        </div>
-                    </div>
-                    <div class="visible-xs">
-                        <div class="input-group">
-                            {{> search}}
-                        </div>
-                    </div>
+                    <h3>Recent Activity</h3>
                 </div>
             </div>
-            <!-- /search -->
-
-            <!-- fundraiser container -->
-            <div class="row">
-
-                <div class="col-sm-12">
-
-                    <div class="row bottom-spacing-20">
-                        <div class="col-md-12">
-                            <ul class="nav nav-tabs">
-                                <li role="presentation" class="active"><a href="#">popular</a></li>
-                                <li role="presentation"><a href="#">local</a></li>
-                                <li role="presentation"><a href="#">ending</a></li>
-                                <li role="presentation"><a href="#">friends</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /filter fundraisers -->
-
-                    <!-- display fundraisers -->
-                    <div class="row">
-
-                        {{> fundraiserList}}
-
-                    </div>
-                    <!-- /display fundraisers -->
-
-                    <!-- load more fundraisers -->
-                    <div class="row bottom-spacing-20">
-                        <div class="col-md-offset-4 col-md-4 col-md-offset-4 text-center">
-                            <a href="/explore" class="btn btn-primary btn-lg btn-block">See All Fundraisers</a>
-                        </div>
-                    </div>
-                    <!-- /view all fundraisers -->
-                </div>
-                <!-- /.col-md-9 -->
-
-            </div>
-            <!-- /fundraiser container -->
+            <!-- /recent activity -->
 
         </div>
         <!-- /container -->

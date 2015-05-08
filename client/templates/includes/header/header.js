@@ -14,5 +14,20 @@ Template.header.helpers({
 
             return active && 'active';
         }catch(e) {}
+    },
+    headerAlert: function () {
+        return 'Display message here. <a href="#">Display link here &raquo;</a>';
+    },
+    headerAlertIsDisplayed: function () {
+        return true;
+    }
+
+});
+
+Template.header.events({
+    'click #header-alert-close': function () {
+
+        $('#header-alert').hide();
+
     }
 });

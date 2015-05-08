@@ -1032,7 +1032,7 @@ button i.fa {
 .bar {
   position: relative;
   padding: 25px 0 50px 0;
-  margin: -20px 0 0 0;
+  margin: -20px 0 30px 0;
 }
 .bar.background-gray {
   background: #eeeeee;
@@ -2041,6 +2041,10 @@ a.list-group-item.active > .badge,
   font-size: 16px;
   text-align: center;
   margin-right: 3px;
+}
+#header-alert {
+  margin-top: -20px;
+  padding: 10px 0;
 }
 .breadcrumb,
 .modal,
