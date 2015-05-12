@@ -1032,7 +1032,7 @@ button i.fa {
 .bar {
   position: relative;
   padding: 25px 0 50px 0;
-  margin: -20px 0 30px 0;
+  margin: -20px 0 0 0;
 }
 .bar.background-gray {
   background: #eeeeee;
@@ -1484,8 +1484,8 @@ a:focus {
   border-radius: 6px;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -1740,6 +1740,16 @@ label {
     margin-right: auto;
   }
 }
+@media (min-width: 991px) {
+  .text-center-lg {
+    text-align: center !important;
+  }
+  .text-center-lg img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /* type */
 h1,
 h2,
@@ -1756,7 +1766,7 @@ h6,
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.1;
-  color: #333333;
+  color: #555555;
 }
 h1,
 .h1,
@@ -1764,7 +1774,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   margin-bottom: 20px;
 }
 p {
@@ -1921,6 +1931,9 @@ a.list-group-item.active > .badge,
   left: 0;
   right: 0;
 }
+.bottom-spacing-0 {
+  margin-bottom: 0;
+}
 .bottom-spacing-10 {
   margin-bottom: 10px;
 }
@@ -2001,9 +2014,6 @@ a.list-group-item.active > .badge,
 .font36 {
   font-size: 32px;
 }
-.panel-body {
-  background-color: #f5f5f5;
-}
 .logo-icon-header {
   color: #6aae7a;
   font-size:32px;
@@ -2028,23 +2038,60 @@ a.list-group-item.active > .badge,
   text-decoration: none;
 }
 .hiw-text {
-  text-decoration: none;
+  font-size: 16px;
 }
 .hiw-number {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   color: #6aae7a;
-  line-height: 30px;
-  border-radius: 20px;
+  line-height: 45px;
+  border-radius: 25px;
   border: solid 2px #6aae7a;
-  font-size: 16px;
+  font-size: 26px;
   text-align: center;
-  margin-right: 3px;
+  margin-right: 20px;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 #header-alert {
   margin-top: -20px;
   padding: 10px 0;
+}
+@media (max-width: 767px) {
+  .barText {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .carousel-indicators {
+    margin-bottom: -45px;
+  }
+  .carousel-control {
+    padding-top: 125px;
+  }
+}
+@media (min-width: 768px) {
+  .barText {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  .carousel-indicators {
+    margin-bottom: -55px;
+  }
+  .carousel-control {
+    padding-top: 145px;
+  }
+}
+.check-item {
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  height: 49px;
+}
+.check-icon {
+  color: #6aae7a;
+  font-size: 24px;
+}
+.green-border {
+  border-color: #6aae7a;
 }
 .breadcrumb,
 .modal,

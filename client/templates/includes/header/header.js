@@ -19,7 +19,7 @@ Template.header.helpers({
         return 'Display message here. <a href="#">Display link here &raquo;</a>';
     },
     headerAlertIsDisplayed: function () {
-        return true;
+        return false;
     }
 
 });
