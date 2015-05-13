@@ -1,4 +1,4 @@
-Template.fundraiserStart.rendered = function() {
+Template.create.rendered = function() {
     Tracker.autorun(function () {
         if (GoogleMaps.loaded()) {
             $("#location").geocomplete({

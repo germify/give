@@ -1,4 +1,4 @@
-Template.fundraiserList.helpers({
+Template.list.helpers({
     fundraisers: function() {
         return Fundraisers.find({isActive: true}, {sort: {startDate: 1}});
     },
