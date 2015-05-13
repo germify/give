@@ -75,10 +75,10 @@ Meteor.startup(function() {
         });
     }
 
-    // insert test fundraisers
-    if (Fundraisers.find().count() === 0) {
+    // insert test givePages
+    if (givePages.find().count() === 0) {
         var end = new Date();
-        Fundraisers.insert({
+        givePages.insert({
             shortId: ShortId.generate(),
             category: 'Emergencies',
             organizer: 'Organizer Name',
@@ -88,7 +88,7 @@ Meteor.startup(function() {
             image: 'img/1.png',
             videoType: 'YouTube',
             videoLink: '',
-            title: 'Test fundraiser 1',
+            title: 'Test give page 1',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: 'Tucson, AZ, United States',
             currencyCode: 'USD',
@@ -98,7 +98,7 @@ Meteor.startup(function() {
             isActive: true
         });
         var end = new Date();
-        Fundraisers.insert({
+        givePages.insert({
             shortId: 'helpbill',
             category: 'Medical',
             organizer: 'Organizer Name',
@@ -108,7 +108,7 @@ Meteor.startup(function() {
             image: 'img/2.jpg',
             videoType: 'YouTube',
             videoLink: '',
-            title: 'Test fundraiser 2',
+            title: 'Test give page 2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: 'Dallas, TX, United States',
             currencyCode: 'USD',
@@ -118,7 +118,7 @@ Meteor.startup(function() {
             isActive: true
         });
         var end = new Date();
-        Fundraisers.insert({
+        givePages.insert({
             shortId: ShortId.generate(),
             category: 'Family',
             organizer: 'Organizer Name',
@@ -128,7 +128,7 @@ Meteor.startup(function() {
             image: 'img/3.jpg',
             videoType: 'YouTube',
             videoLink: '',
-            title: 'Test fundraiser 3',
+            title: 'Test give page 3',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: 'Miami, FL, United States',
             currencyCode: 'USD',
@@ -138,7 +138,7 @@ Meteor.startup(function() {
             isActive: true
         });
         var end = new Date();
-        Fundraisers.insert({
+        givePages.insert({
             shortId: ShortId.generate(),
             category: 'Sports',
             organizer: 'Organizer Name',
@@ -148,7 +148,7 @@ Meteor.startup(function() {
             image: 'img/4.jpg',
             videoType: 'YouTube',
             videoLink: '',
-            title: 'Test fundraiser 4',
+            title: 'Test give page 4',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: 'New York, NY, United States',
             currencyCode: 'USD',
@@ -158,8 +158,8 @@ Meteor.startup(function() {
             isActive: true
         });
         var end = new Date();
-        Fundraisers.insert({
-            shortId: 'myfundraiser',
+        givePages.insert({
+            shortId: 'mygivePage',
             category: 'Memorials',
             organizer: 'Organizer Name',
             beneficiary: 'Beneficiary Name',
@@ -168,7 +168,7 @@ Meteor.startup(function() {
             image: 'img/5.jpg',
             videoType: 'YouTube',
             videoLink: '',
-            title: 'Test fundraiser 5',
+            title: 'Test give page 5',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: 'Las Vegas, NV, United States',
             currencyCode: 'USD',
@@ -178,7 +178,7 @@ Meteor.startup(function() {
             isActive: true
         });
         var end = new Date();
-        Fundraisers.insert({
+        givePages.insert({
             shortId: ShortId.generate(),
             category: 'Volunteer',
             organizer: 'Organizer Name',
@@ -188,7 +188,7 @@ Meteor.startup(function() {
             image: 'img/6.jpg',
             videoType: 'YouTube',
             videoLink: '',
-            title: 'Test fundraiser 6',
+            title: 'Test give page 6',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: 'Portland, OR, United States',
             currencyCode: 'USD',

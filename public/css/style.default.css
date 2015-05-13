@@ -1963,27 +1963,33 @@ a.list-group-item.active > .badge,
 .progress-bar-success {
   background-color: #6aae7a;
 }
-.fundraiser-amount {
+.give-page-amount {
   font-size: 18px;
   margin-bottom: -5px;
 }
-.fundraiser-location {
+.give-page-location {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   padding-top: 2px;
 }
-.fundraiser-days-left {
+.give-page-days-left {
   float: right;
   font-size: 12px;
   padding-top: 5px;
 }
-.fundraiser-category {
+.give-page-category {
   padding-top: 1px;
 }
-.fundraiser-link,
-.fundraiser-link:hover{
+.give-page-categories {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-decoration: none; !important;
+}
+.give-page-link,
+.give-page-link:hover{
   color: #555555;
 }
-.fundraiser-icon:hover {
+.give-page-icon:hover {
   color: #999999;
   font-size: 16px;
   padding-top:2px;

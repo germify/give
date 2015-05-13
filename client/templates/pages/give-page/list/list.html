@@ -1,63 +1,99 @@
 <template name="list">
-    {{#each fundraisers}}
-        <!-- column -->
-        <div class="col-md-4 col-sm-6">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-sm-9">
 
-            <div class="panel panel-default">
-                <div class="panel-heading padding10 clickable">
-                    <!-- image -->
-                    <div class="fundraiser-image">
-                        <a href="/{{shortId}}" class="fundraiser-link">
-                            <img src="{{image}}" alt="{{title}}" class="img-responsive"/>
-                        </a>
-                    </div>
-
-                    <!-- title -->
-                    <h5>
-                        <a href="/{{shortId}}" class="fundraiser-link">
-                            {{title}}
-                        </a>
-                    </h5>
-
-                    <!-- funding bar -->
-                    <div class="progress">
-                        <a href="/{{shortId}}" class="fundraiser-link">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{percentFunded}}"
-                                 aria-valuemin="0" aria-valuemax="{{percentFunded}}" style="width: {{percentFunded}}%;">
-                                <span class="sr-only">{{percentFunded}}% Funded</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- days left -->
-                    <div class="fundraiser-days-left">
-                        <a href="/{{shortId}}" class="fundraiser-link">
-                            {{pluralize daysLeft "Day"}} left
-                        </a>
-                    </div>
-
-                    <!-- amount raised -->
-                    <div class="fundraiser-amount">
-                        <a href="/{{shortId}}" class="fundraiser-link">
-                            {{currencySymbol}}{{amountFormat}}
-                        </a>
-                    </div>
-                </div>
-                <div class="panel-body padding5x10" style="background-color: #f5f5f5;">
-                    <div class="fundraiser-category pull-right">
-                        <a href="#" class="fundraiser-link" title="{{category}}">
-                            <i class="{{categoryIcon}} fundraiser-icon" style="font-size: 16px; padding-top:2px;"></i>
-                        </a>
-                    </div>
-                    <div class="fundraiser-location font12">
-                        <a href="#" class="fundraiser-link">
-                            {{location}}
-                        </a>
-                    </div>
+            <div class="row bottom-spacing-30">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="active"><a href="#">popular</a></li>
+                        <li role="presentation"><a href="#">local</a></li>
+                        <li role="presentation"><a href="#">ending</a></li>
+                        <li role="presentation"><a href="#">friends</a></li>
+                    </ul>
                 </div>
             </div>
 
+            <div class="row">
+                {{#each givePages}}
+                    <!-- column -->
+                    <div class="col-md-6 col-sm-6">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading padding10 clickable">
+                                <!-- image -->
+                                <div class="give-page-image">
+                                    <a href="/{{shortId}}" class="give-page-link">
+                                        <img src="/{{image}}" alt="{{title}}" class="img-responsive"/>
+                                    </a>
+                                </div>
+
+                                <!-- title -->
+                                <h5>
+                                    <a href="/{{shortId}}" class="give-page-link">
+                                        {{title}}
+                                    </a>
+                                </h5>
+
+                                <!-- funding bar -->
+                                <div class="progress">
+                                    <a href="/{{shortId}}" class="give-page-link">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{percentFunded}}"
+                                             aria-valuemin="0" aria-valuemax="{{percentFunded}}" style="width: {{percentFunded}}%;">
+                                            <span class="sr-only">{{percentFunded}}% Funded</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- days left -->
+                                <div class="give-page-days-left">
+                                    <a href="/{{shortId}}" class="give-page-link">
+                                        {{pluralize daysLeft "Day"}} left
+                                    </a>
+                                </div>
+
+                                <!-- amount raised -->
+                                <div class="give-page-amount">
+                                    <a href="/{{shortId}}" class="give-page-link">
+                                        {{currencySymbol}}{{amountFormat}}
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body padding5x10" style="background-color: #f5f5f5;">
+                                <div class="give-page-category pull-right">
+                                    <a href="#" class="give-page-link" title="{{category}}">
+                                        <i class="{{categoryIcon}} give-page-icon" style="font-size: 16px; padding-top:2px;"></i>
+                                    </a>
+                                </div>
+                                <div class="give-page-location font12">
+                                    <a href="#" class="give-page-link">
+                                        {{location}}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /column -->
+                {{/each}}
+            </div>
+
+            <!-- load more give pages -->
+            <div class="row bottom-spacing-20">
+                <div class="col-md-12">
+                    <a href="/explore" class="btn btn-primary btn-lg btn-block">See All Give Pages</a>
+                </div>
+            </div>
+            <!-- /view all give pages -->
+
         </div>
-        <!-- /column -->
-    {{/each}}
+        <!-- categories -->
+        <div class="col-md-2 col-sm-3">
+            <h3 style="border-bottom: solid 1px #ccc; margin: 5px 0 25px 0; padding-bottom: 10px;">Categories</h3>
+            {{#each categories}}
+                <div class="give-page-categories"><a href="/explore/{{name}}"><i class="{{icon}} fa-lg fa-fw" style="margin-left: -5px; margin-right: 6px; font-size: 18px;;"></i>{{name}}</a></div>
+            {{/each}}
+        </div>
+    </div>
+        </div>
 </template>
