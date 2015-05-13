@@ -46,30 +46,35 @@
             </div>
             <!--/.navbar-header -->
             <div class="pull-right hidden-xs">
-                <a href="{{pathFor 'fundraiserStart'}}" class="btn btn-primary-invert {{activeRouteClass 'fundraiserStart'}}" style="margin-top:9px;">
-                    <i class="fa fa-arrow-circle-up fa-lg"></i>
-                    Start A Fundraiser
+                <a href="{{pathFor 'home'}}" class="btn btn-primary-invert {{activeRouteClass 'home'}}" style="margin-top:9px;">
+                    <i class="fa fa-home fa-lg"></i>
+                    <span class="sr-only">Home</span>
                 </a>
 
                 <a href="{{pathFor 'gifts'}}" class="btn btn-primary-invert {{activeRouteClass 'gifts'}}" style="margin-top:9px;">
                     <i class="fa fa-gift fa-lg"></i>
-                    Crowdfunding Gifts
+                    <span class="sr-only">Gifts</span>
+                </a>
+
+                <a href="{{pathFor 'learn'}}" class="btn btn-primary-invert {{activeRouteClass 'learn'}}" style="margin-top:9px;">
+                    <i class="fa fa-info-circle fa-lg"></i>
+                    <span class="sr-only">Learn</span>
                 </a>
 
                 <a href="#" class="btn btn-primary-invert {{activeRouteClass 'explore'}}" data-toggle="collapse" data-target="#explore" style="margin-top:9px;">
                     <i class="fa fa-search" style="font-size: 16px;"></i>
-                    Explore <span class="caret"></span>
+                    <span class="sr-only">Explore</span>
                 </a>
 
-                <div class="btn-group pull-right" style="margin-left: 4px;">
-                    <button type="button" class="btn btn-primary-invert dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-bottom: 11px; margin-top:9px;">
-                        <i class="fa fa-info-circle fa-lg"></i>
-                        More <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                        {{> infoList}}
-                    </ul>
-                </div>
+                <!--<div class="btn-group pull-right" style="margin-left: 4px;">-->
+                    <!--<button type="button" class="btn btn-primary-invert dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-bottom: 11px; margin-top:9px;">-->
+                        <!--<i class="fa fa-info-circle fa-lg"></i>-->
+                        <!--More <span class="caret"></span>-->
+                    <!--</button>-->
+                    <!--<ul class="dropdown-menu dropdown-menu-right" role="menu">-->
+                        <!--{{> infoList}}-->
+                    <!--</ul>-->
+                <!--</div>-->
             </div>
 
             <!-- explore -->

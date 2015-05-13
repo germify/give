@@ -1032,7 +1032,7 @@ button i.fa {
 .bar {
   position: relative;
   padding: 25px 0 50px 0;
-  margin: -20px 0 0 0;
+  margin: -20px 0 20px 0;
 }
 .bar.background-gray {
   background: #eeeeee;
@@ -1523,17 +1523,15 @@ hr {
   padding: 6px;
 }
 .btn-primary-invert {
-  color: #6aae7a;
-  background-color: #fff;
-  border-color: #6aae7a;
+  color: #555;
+  border-color: #ccc;
 }
 .btn-primary-invert:hover,
 .btn-primary-invert:focus,
 .btn-primary-invert:active,
 .btn-primary-invert.active,
 .open .dropdown-toggle.btn-primary-invert {
-  color: #fff;
-  background-color: #6aae7a;
+  color: #6aae7a;
   border-color: #6aae7a;
   box-shadow: none;
 }
@@ -1937,6 +1935,9 @@ a.list-group-item.active > .badge,
 .bottom-spacing-10 {
   margin-bottom: 10px;
 }
+.bottom-spacing-15 {
+  margin-bottom: 15px;
+}
 .bottom-spacing-20 {
   margin-bottom: 20px;
 }
@@ -2050,7 +2051,7 @@ a.list-group-item.active > .badge,
   border: solid 2px #6aae7a;
   font-size: 26px;
   text-align: center;
-  margin-right: 20px;
+  margin-right: 25px;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 #header-alert {
