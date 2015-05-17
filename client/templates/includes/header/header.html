@@ -3,89 +3,48 @@
     <div class="navbar navbar-default navbar-fixed-top yamm" role="navigation" id="navbar">
         <div class="container-fluid">
 
-            <div class="row" style="padding-top:7px; font-size: 12px;">
+            <div class="row" style="padding-top:12px; font-size: 12px;">
                 <div class="col-md-12">
                     <div class="pull-right">
-                        Hello! <a href="#" data-toggle="modal" data-target="#signin-modal">sign in</a> or
+                        <!--<a href="#">account</a> | <a href="#">sign out</a>-->
+                        <a href="#" data-toggle="modal" data-target="#signin-modal">sign in</a> &nbsp;or&nbsp;
                         <a href="#" data-toggle="modal" data-target="#signin-modal">sign up</a>
                     </div>
                 </div>
             </div>
 
             <div class="navbar-header" style="margin:0; padding: 0;">
-                <a class="navbar-brand" href="{{pathFor 'home'}}" style="margin:0; padding: 0;">
-                    <div style="font-size: 48px; margin: 2px 0 0 0; padding: 0;">
+                <a class="navbar-brand" href="{{pathFor 'home'}}" style="margin:0 0 -5px 0; padding: 0;">
+                    <div style="font-size: 48px; margin: 0; padding: 0;">
                         gi<i class="fa fa-heart logo-icon-header" style="padding:0 4px 0 3px; margin:-2px 0 0 0;"></i>e
                     </div>
                 </a>
-                <div class="pull-right visible-xs" style="margin:0; padding: 0;">
-                    <a href="{{pathFor 'create'}}" class="btn btn-primary-invert header-xs {{activeRouteClass 'create'}}" style="margin:9px -1px 0 0;">
-                        <i class="fa fa-arrow-circle-up fa-lg"></i>
-                        <span class="sr-only">Create A Give Page</span>
-                    </a>
-
-                    <a href="{{pathFor 'gifts'}}" class="btn btn-primary-invert header-xs {{activeRouteClass 'gifts'}}" style="margin:9px 0 0 0;">
-                        <i class="fa fa-gift fa-lg"></i>
-                        <span class="sr-only">Crowdfunding Gifts</span>
-                    </a>
-
-                    <a href="#" class="btn btn-primary-invert header-xs {{activeRouteClass 'explore'}}" data-toggle="collapse" data-target="#explore" style="margin:9px 0 0 0;">
-                        <i class="fa fa-search" style="font-size: 16px; padding:0; margin: 0;"></i> <span class="sr-only">Explore</span> <span class="caret"></span>
-                    </a>
-
-                    <div class="btn-group pull-right" style="margin: 9px 0 0 3px;">
-                        <button type="button" class="btn btn-primary-invert dropdown-toggle header-xs" data-toggle="dropdown" aria-expanded="false" style="margin-bottom: 11px;">
-                            <i class="fa fa-info-circle fa-lg" style="padding:0; margin: 0;"></i> <span class="sr-only">More Info</span> <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            {{> infoList}}
-                        </ul>
-                    </div>
+                <div class="pull-right visible-xs" style="margin-top: 10px;">
+                    {{> headerLinks}}
                 </div>
-
             </div>
             <!--/.navbar-header -->
-            <div class="pull-right hidden-xs">
-                <a href="{{pathFor 'home'}}" class="btn btn-primary-invert {{activeRouteClass 'home'}}" style="margin-top:9px;">
-                    <i class="fa fa-home fa-lg"></i>
-                    <span class="sr-only">Home</span>
-                </a>
-
-                <a href="{{pathFor 'gifts'}}" class="btn btn-primary-invert {{activeRouteClass 'gifts'}}" style="margin-top:9px;">
-                    <i class="fa fa-gift fa-lg"></i>
-                    <span class="sr-only">Gifts</span>
-                </a>
-
-                <a href="{{pathFor 'learn'}}" class="btn btn-primary-invert {{activeRouteClass 'learn'}}" style="margin-top:9px;">
-                    <i class="fa fa-info-circle fa-lg"></i>
-                    <span class="sr-only">Learn</span>
-                </a>
-
-                <a href="#" class="btn btn-primary-invert {{activeRouteClass 'explore'}}" data-toggle="collapse" data-target="#explore" style="margin-top:9px;">
-                    <i class="fa fa-search" style="font-size: 16px;"></i>
-                    <span class="sr-only">Explore</span>
-                </a>
-
-                <!--<div class="btn-group pull-right" style="margin-left: 4px;">-->
-                    <!--<button type="button" class="btn btn-primary-invert dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="margin-bottom: 11px; margin-top:9px;">-->
-                        <!--<i class="fa fa-info-circle fa-lg"></i>-->
-                        <!--More <span class="caret"></span>-->
-                    <!--</button>-->
-                    <!--<ul class="dropdown-menu dropdown-menu-right" role="menu">-->
-                        <!--{{> infoList}}-->
-                    <!--</ul>-->
-                <!--</div>-->
+            <div class="pull-right hidden-xs" style="margin-top: 10px;">
+                {{> headerLinks}}
             </div>
 
             <!-- explore -->
             <div class="collapse clearfix" id="explore">
                 <div style="margin: 20px 0;">
                     <div class="input-group">
-                        {{> search}}
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-primary dropdown-toggle text-lowercase" data-toggle="dropdown" aria-expanded="false">Browse <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <!--<li><a href="/explore" class="close-search"><i class="fa fa-arrow-circle-up fa-lg fa-fw" style="margin-left: -8px;"></i>&nbsp; All Give Pages</a></li>-->
+                                {{#each categories}}
+                                    <li><a href="/explore/{{name}}"><i class="{{icon}} fa-lg fa-fw" style="margin-left: -8px;"></i>&nbsp; {{name}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <input type="text" name="search" id="search" class="form-control" placeholder="or search give pages..."/>
                     </div>
                 </div>
             </div>
-
         </div>
 
     </div>

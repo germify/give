@@ -1,9 +1,37 @@
 <template name="list">
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-10 col-sm-9">
 
-            <div class="row bottom-spacing-30">
+    <!-- search -->
+    <div class="bottom-spacing-10 hidden-xs"></div>
+    <div class="row bottom-spacing-20">
+        <div class="col-md-12">
+            <div class="input-group iput-group-lg">
+                <span class="input-group-addon"><i class="fa fa-search fa-lg"></i></span>
+                <input type="text" name="search" id="search" class="form-control input-lg" placeholder="Search give pages..."/>
+            </div>
+        </div>
+    </div>
+    <!-- /search -->
+
+    <div class="row bottom-spacing-20">
+        <!-- categories -->
+        <div class="col-md-3 col-sm-3">
+            <div class="bottom-spacing-10 hidden-xs"></div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Categories</h3>
+                </div>
+                <div class="panel-body" style="margin-bottom: -20px;">
+                    {{#each categories}}
+                        <div class="give-page-categories"><a href="/explore/{{name}}"><i class="{{icon}} fa-lg fa-fw" style="margin-left: -3px; margin-right: 6px; font-size: 18px;;"></i>{{name}}</a></div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <!-- /categories -->
+
+        <div class="bottom-spacing-10 hidden-xs"></div>
+        <div class="col-md-9 col-sm-9">
+            <div class="row bottom-spacing-20">
                 <div class="col-md-12">
                     <ul class="nav nav-tabs">
                         <li role="presentation" class="active"><a href="#">popular</a></li>
@@ -18,7 +46,7 @@
                 {{#each givePages}}
                     <!-- column -->
                     <div class="col-md-6 col-sm-6">
-
+                        <div class="bottom-spacing-10 hidden-xs"></div>
                         <div class="panel panel-default">
                             <div class="panel-heading padding10 clickable">
                                 <!-- image -->
@@ -79,21 +107,16 @@
             </div>
 
             <!-- load more give pages -->
-            <div class="row bottom-spacing-20">
+            <div class="row">
                 <div class="col-md-12">
+                    <div class="bottom-spacing-10 hidden-xs"></div>
                     <a href="/explore" class="btn btn-primary btn-lg btn-block">See All Give Pages</a>
+                    <div class="bottom-spacing-10 hidden-xs"></div>
                 </div>
             </div>
             <!-- /view all give pages -->
 
         </div>
-        <!-- categories -->
-        <div class="col-md-2 col-sm-3">
-            <h3 style="border-bottom: solid 1px #ccc; margin: 5px 0 25px 0; padding-bottom: 10px;">Categories</h3>
-            {{#each categories}}
-                <div class="give-page-categories"><a href="/explore/{{name}}"><i class="{{icon}} fa-lg fa-fw" style="margin-left: -5px; margin-right: 6px; font-size: 18px;;"></i>{{name}}</a></div>
-            {{/each}}
-        </div>
+
     </div>
-        </div>
 </template>

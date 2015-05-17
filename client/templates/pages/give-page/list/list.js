@@ -1,6 +1,6 @@
 Template.list.helpers({
     givePages: function() {
-        return givePages.find({isActive: true}, {sort: {startDate: 1}});
+        return givePages.find({isActive: true}, {sort: {startDate: 1}, limit: 6});
     },
     amountFormat: function () {
         return numberWithCommas(this.currentAmount);

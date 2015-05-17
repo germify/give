@@ -10,7 +10,7 @@ Meteor.startup(function() {
         Categories.insert({
             createdAt: new Date(),
             name: 'Community',
-            icon: 'fa fa-users',
+            icon: 'fa fa-globe',
             isActive: true
         });
         Categories.insert({
@@ -40,7 +40,7 @@ Meteor.startup(function() {
         Categories.insert({
             createdAt: new Date(),
             name: 'Family',
-            icon: 'fa fa-home',
+            icon: 'fa fa-users',
             isActive: true
         });
         Categories.insert({

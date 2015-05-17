@@ -3,31 +3,22 @@ Template.header.rendered = function() {
 };
 
 Template.header.helpers({
-    activeRouteClass: function(/* route names */) {
-        try {
-            var args = Array.prototype.slice.call(arguments, 0);
-            args.pop();
-
-            var active = _.any(args, function(name) {
-                return Router.current() && Router.current().route.getName() === name
-            });
-
-            return active && 'active';
-        }catch(e) {}
-    },
     headerAlert: function () {
-        return 'Display message here. <a href="#">Display link here &raquo;</a>';
+        return "We opened our doors in May 2015. <a href='#'>tell us what you think</a>";
     },
     headerAlertIsDisplayed: function () {
         return false;
+    },
+    categories: function() {
+        return Categories.find({isActive: true}, {sort: {name: 1}});
+    },
+    name: function () {
+        return this.name.toLowerCase();
     }
-
 });
 
 Template.header.events({
     'click #header-alert-close': function () {
-
         $('#header-alert').hide();
-
     }
 });
