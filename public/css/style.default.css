@@ -1,5 +1,4 @@
 body.no-padding {
-  /*padding-top: 0;*/
   padding-top: 30px;
 }
 a,
@@ -1120,7 +1119,7 @@ button i.fa {
   line-height: 28px;
 }
 #copyright .social {
-  font-size: 34px;
+  font-size: 16px;
   padding:0;
   margin:0;
   text-decoration: none;
@@ -1937,6 +1936,9 @@ a.list-group-item.active > .badge,
 .bottom-spacing-0 {
   margin-bottom: 0;
 }
+.bottom-spacing-5 {
+  margin-bottom: 5px;
+}
 .bottom-spacing-10 {
   margin-bottom: 10px;
 }
@@ -2129,6 +2131,7 @@ a.list-group-item.active > .badge,
 .dropdown-menu:hover > li > a {
   background-color: #fff;
 }
+
 .breadcrumb,
 .modal,
 .footer-name,
@@ -2138,9 +2141,11 @@ a.list-group-item.active > .badge,
 .nav-tabs,
 .button,
 .dropdown-toggle,
-.well,
-.default-text
+.well
 {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   text-transform: lowercase;
+}
+.default-text {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
 }

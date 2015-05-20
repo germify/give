@@ -1,77 +1,22 @@
 <template name="footer">
 
-    <!-- footer -->
-    <div id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <h4>Crowdfunding</h4>
-                    <a href="{{pathFor 'home'}}">Create A Give Page</a><br/>
-                    <a href="#">Crowdfunding Gifts</a><br/>
-                    <a href="#">Explore Give Pages</a><br/>
-                    <a href="#">Help &amp; FAQ</a><br/>
-                    <a href="#">Ideas & Tips</a><br/>
-
-                    <hr class="hidden-md hidden-lg hidden-sm">
-
-                </div>
-                <!-- /.col-md-3 -->
-
-                <div class="col-md-3 col-sm-6">
-
-                    <h4>General</h4>
-                    <a href="#">About</a><br/>
-                    <a href="#">Winners</a><br/>
-                    <a href="#">Contact</a><br/>
-                    <a href="#" data-toggle="modal" data-target="#modal-signin">Sign In</a>
-
-                    <hr class="hidden-md hidden-lg">
-
-                </div>
-                <!-- /.col-md-3 -->
-
-                <div class="col-md-3 col-sm-6">
-
-                    <hr class="hidden-xs hidden-md hidden-lg">
-
-                    <h4>Legal</h4>
-                    <a href="#">Rules</a><br/>
-                    <a href="#">Terms</a><br/>
-                    <a href="#">Privacy</a><br/>
-
-                    <hr class="hidden-sm hidden-md hidden-lg">
-
-                </div>
-                <!-- /.col-md-3 -->
-
-                <div class="col-md-3 col-sm-6">
-
-                    <h4>Platform</h4>
-                    <strong>Raised:</strong> $0<br/>
-                    <strong>Gifts:</strong> $0<br/>
-                    <strong>Fees:</strong> $0<br/>
-                    <strong>Give Pages:</strong> 0<br/>
-                    <strong>Supporters:</strong> 0<br/>
-
-                </div>
-                <!-- /.col-md-3 -->
-            </div>
-        </div>
-        <!-- /.container -->
-    </div>
-    <!-- /#footer -->
-
     <!-- copyright -->
     <div id="copyright">
         <div class="container-fluid">
             <div class="col-md-12 footer-name text-center">
-                <a href="#" class="modalsocial social">
-                    <i class="fa fa-facebook-square social"></i>
+                <div>
+                    <a href="#" style="margin-right: 10px;">Home</a>
+                    <a href="#" style="margin-right: 10px;">Gifts</a>
+                    <a href="#" style="margin-right: 10px;">Help</a>
+                    <a href="#">Legal</a>
+                </div>
+                <span class="default-text" style="margin-right: 5px;">&copy; {{footerYear}} Give</span>
+                <a href="#" class="modalsocial social" style="margin-right: 5px;">
+                    <i class="fa fa-facebook social"></i>
                 </a>
                 <a href="#" class="modalsocial social">
-                    <i class="fa fa-twitter-square social"></i>
+                    <i class="fa fa-twitter social"></i>
                 </a>
-                <div style="font-size: 11px;">&copy;{{footerYear}} Give</div>
             </div>
         </div>
     </div>
