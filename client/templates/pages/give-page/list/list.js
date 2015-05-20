@@ -22,5 +22,8 @@ Template.list.helpers({
     },
     name: function () {
         return this.name.toLowerCase();
+    },
+    category: function () {
+        return this.category.toLowerCase();
     }
 });

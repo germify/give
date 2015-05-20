@@ -28,23 +28,6 @@
                 {{> headerLinks}}
             </div>
 
-            <!-- explore -->
-            <div class="collapse clearfix" id="explore">
-                <div style="margin: 20px 0;">
-                    <div class="input-group">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-primary dropdown-toggle text-lowercase" data-toggle="dropdown" aria-expanded="false">Browse <span class="caret"></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <!--<li><a href="/explore" class="close-search"><i class="fa fa-arrow-circle-up fa-lg fa-fw" style="margin-left: -8px;"></i>&nbsp; All Give Pages</a></li>-->
-                                {{#each categories}}
-                                    <li><a href="/explore/{{name}}"><i class="{{icon}} fa-lg fa-fw" style="margin-left: -8px;"></i>&nbsp; {{name}}</a></li>
-                                {{/each}}
-                            </ul>
-                        </div>
-                        <input type="text" name="search" id="search" class="form-control" placeholder="or search give pages..."/>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>

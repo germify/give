@@ -355,12 +355,14 @@ button i.fa {
 }
 .ribbon .theribbon {
   position: relative;
-  width: 80px;
-  padding: 6px 20px 6px 20px;
-  margin: 30px 10px 10px -71px;
+  padding: 5px 10px;
+  margin: 20px 10px 10px -71px;
   color: #fff;
   background-color: #6aae7a;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+.ribbon .theribbon:hover {
+  background-color: #488456;
 }
 .ribbon .theribbon:before,
 .ribbon .theribbon:after {
@@ -2035,6 +2037,15 @@ a.list-group-item.active > .badge,
   margin-bottom: 5px;
 }
 .btn-default {
+  color: #6aae7a;
+  border-color: #6aae7a;
+  background-color: #f5f5f5;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active{
+  color: #488456;
+  border-color: #488456;
   background-color: #f5f5f5;
 }
 .page {
@@ -2055,10 +2066,10 @@ a.list-group-item.active > .badge,
   display: inline-block;
   width: 45px;
   height: 45px;
-  color: #555;
+  color: #777;
   line-height: 45px;
   border-radius: 25px;
-  border: solid 2px #555;
+  border: solid 1px #777;
   font-size: 26px;
   text-align: center;
   margin-right: 25px;
@@ -2104,17 +2115,31 @@ a.list-group-item.active > .badge,
 .green-border {
   border-color: #6aae7a;
 }
+.green-text {
+  color: #6aae7a;
+}
+.green-text:hover,
+.green-text:active,
+.green-text:focus{
+  color: #488456;
+}
+.dropdown-menu > li > a {
+  color: #6aae7a;
+}
+.dropdown-menu:hover > li > a {
+  background-color: #fff;
+}
 .breadcrumb,
 .modal,
 .footer-name,
-.dropdown-menu,
 .input-group-addon,
 .form-control,
 .list-group-item,
 .nav-tabs,
 .button,
 .dropdown-toggle,
-.well
+.well,
+.default-text
 {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   text-transform: lowercase;
