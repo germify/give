@@ -1,114 +1,104 @@
 <template name="home">
 
-    <!-- content -->
-    <div id="content">
-
-        <!-- container -->
-        <div class="container-fluid">
-            <div class="bottom-spacing-10 hidden-xs"></div>
-            <div class="row">
-                <div class="col-md-6 col-sm-6 bottom-spacing-20">
-                    <div class="well padding20 bottom-spacing-0">
-                        <h4 style="margin: 0 0 20px 0; font-size: 20px;">
-                            <div id="raiseMoney" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        Raise money for free
-                                    </div>
-                                    <div class="item">
-                                        for medical bills...
-                                    </div>
-                                    <div class="item">
-                                        for vet bills...
-                                    </div>
-                                    <div class="item">
-                                        for school supplies...
-                                    </div>
-                                    <div class="item">
-                                        for youth sports...
-                                    </div>
-                                    <div class="item">
-                                        for your community...
-                                    </div>
-                                    <div class="item">
-                                        for special events...
-                                    </div>
-                                    <div class="item">
-                                        for volunteering...
-                                    </div>
-                                    <div class="item">
-                                        for any cause...
-                                    </div>
-                                </div>
+    <div class="row">
+        <div class="bottom-spacing-10 hidden-xs"></div>
+        <div class="col-md-6 col-sm-6 bottom-spacing-20">
+            <div class="well padding20 bottom-spacing-0">
+                <h4 style="margin: 0 0 20px 0; font-size: 20px;">
+                    <div id="raiseMoney" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                Raise money for free
                             </div>
-                            <script>
-                                $('#raiseMoney').carousel({
-                                    interval: 3000,
-                                    cycle: true
-                                });
-                            </script>
-                        </h4>
-                        <div class="form-group">
-                            <input type="text" name="title" id="title" class="form-control input-lg" placeholder="my give page title">
-                        </div>
-                        <div class="form-group input-group input-group-lg">
-                            <div class="input-group-btn">
-                                <a href="#" class="btn btn-default green-text" data-toggle="dropdown" aria-expanded="false" style="padding-left: 8px; padding-right: 8px; border-right: none; border-color: #ccc;"><i class="fa fa-usd fa-lg"></i><span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">US Dollar</a></li>
-                                    <li><a href="#">Canadian Dollar</a></li>
-                                    <li><a href="#">Euro</a></li>
-                                    <li><a href="#">British Pound</a></li>
-                                </ul>
+                            <div class="item">
+                                for medical bills...
                             </div>
-                            <input type="text" name="goalAmount" id="goalAmount" class="form-control input-lg" placeholder="Amount to raise">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <a href="{{pathFor 'create'}}" class="btn btn-primary btn-lg btn-block">Get Started</a>
+                            <div class="item">
+                                for vet bills...
                             </div>
-                            <div class="visible-xs visible-sm bottom-spacing-20"></div>
-                            <div class="col-md-6">
-                                <a href="{{pathFor 'learn'}}" class="btn btn-default btn-lg btn-block">Learn More</a>
+                            <div class="item">
+                                for school supplies...
+                            </div>
+                            <div class="item">
+                                for youth sports...
+                            </div>
+                            <div class="item">
+                                for your community...
+                            </div>
+                            <div class="item">
+                                for special events...
+                            </div>
+                            <div class="item">
+                                for volunteering...
+                            </div>
+                            <div class="item">
+                                for any cause
                             </div>
                         </div>
                     </div>
+                    <script>
+                        $('#raiseMoney').carousel({
+                            interval: 3000,
+                            cycle: true
+                        });
+                    </script>
+                </h4>
+                <div class="form-group">
+                    <input type="text" name="title" id="title" class="form-control input-lg" placeholder="my give page title">
                 </div>
-                <div class="col-md-6 col-sm-6 bottom-spacing-20">
-                    <div class="row hiw-item">
-                        <div class="col-md-12 hiw-text">
-                            <span class="hiw-number pull-left">1</span>
-                            Create a free give page in minutes to raise money for yourself, a loved one or a cause.
-                        </div>
+                <div class="form-group input-group input-group-lg">
+                    <div class="input-group-btn">
+                        <a href="#" class="btn btn-default green-text" data-toggle="dropdown" aria-expanded="false" style="padding-left: 8px; padding-right: 8px; border-right: none; border-color: #ccc;"><i class="fa fa-usd fa-lg"></i><span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">US Dollar</a></li>
+                            <li><a href="#">Canadian Dollar</a></li>
+                            <li><a href="#">Euro</a></li>
+                            <li><a href="#">British Pound</a></li>
+                        </ul>
                     </div>
-                    <div class="row hiw-item">
-                        <div class="col-md-12 hiw-text">
-                            <span class="hiw-number pull-left">2</span>
-                            Share your give page with friends, family and the world with our simple sharing tools.
-                        </div>
+                    <input type="text" name="goalAmount" id="goalAmount" class="form-control input-lg" placeholder="Amount to raise">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="{{pathFor 'create'}}" class="btn btn-primary btn-lg btn-block">Get Started</a>
                     </div>
-                    <div class="row hiw-item">
-                        <div class="col-md-12 hiw-text">
-                            <span class="hiw-number pull-left">3</span>
-                            Instantly deposit 100% of all donations into your account without any platform fees.
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 hiw-text">
-                            <span class="hiw-number pull-left">4</span>
-                            <a href="{{pathFor 'gifts'}}">win crowdfunding gifts</a> with donors when they make a donation or purchase entries.
-                        </div>
+                    <div class="visible-xs visible-sm bottom-spacing-20"></div>
+                    <div class="col-md-6">
+                        <a href="{{pathFor 'learn'}}" class="btn btn-default btn-lg btn-block">Learn More</a>
                     </div>
                 </div>
             </div>
-
-            <!-- list give pages -->
-            {{> list}}
-
         </div>
-        <!-- /container -->
-
+        <div class="col-md-6 col-sm-6 bottom-spacing-20">
+            <div class="row hiw-item">
+                <div class="col-md-12 hiw-text">
+                    <a href="{{pathFor 'create'}}"><span class="hiw-number pull-left">1</span></a>
+                    Create a free give page in minutes to raise money for yourself, a loved one or a cause.
+                </div>
+            </div>
+            <div class="row hiw-item">
+                <div class="col-md-12 hiw-text">
+                    <a href="{{pathFor 'create'}}"><span class="hiw-number pull-left">2</span></a>
+                    Share your give page with friends, family and the world with our simple sharing tools.
+                </div>
+            </div>
+            <div class="row hiw-item">
+                <div class="col-md-12 hiw-text">
+                    <a href="{{pathFor 'create'}}"><span class="hiw-number pull-left">3</span></a>
+                    Instantly deposit 100% of all donations into your account without any platform fees.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 hiw-text">
+                    <a href="{{pathFor 'create'}}"><span class="hiw-number pull-left">4</span></a>
+                    <a href="{{pathFor 'gifts'}}">win crowdfunding gifts</a> with donors when they make a donation or purchase entries.
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /content -->
+    <!-- /row -->
+
+    <!-- list give pages -->
+    {{> list}}
 
 </template>

@@ -1,18 +1,11 @@
 <template name="accessDenied">
-    <div id="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 page">
+    <div class="row">
+        <div class="col-md-12 text-center">
 
-                    <h2>Access Denied</h2>
-                    <p>You can't get here! Please log in.</p>
+            <h3 class="bottom-spacing-30">Access Denied</h3>
 
-                </div>
-                <!-- /.col-sm-6 -->
-            </div>
-            <!-- /.row -->
+            <a href="{{pathFor 'home'}}" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+
         </div>
-        <!-- /.container -->
     </div>
-    <!-- /#content -->
 </template>
